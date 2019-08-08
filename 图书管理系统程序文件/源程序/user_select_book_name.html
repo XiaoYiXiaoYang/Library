@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>输入名称查询页面</title>
+	<script type="text/javascript"> 
+      function check_data()
+      {
+        if (document.myForm.book_name.value.length == 0)
+        {
+          alert("“查询内容”不能为空白");
+          return false;
+        }
+        myForm.submit();					
+      }
+    </script>	
+</head>
+<body bgcolor="lightyellow">
+	<div align="center">
+		<form method="post" action="sql_user_select_book_name.php" name="myForm">
+			<p align="center"> 本查询是模糊查询</p>
+			请输入任意词：<input type="text" name="book_name" ><br><br>
+			（范围：书籍名称、书籍出版社、书籍分类、书籍作者）<br><br>
+			<input type="button" name="" value="提交" onclick="check_data()">
+		</form>
+	</div>
+	
+</body>
+</html>

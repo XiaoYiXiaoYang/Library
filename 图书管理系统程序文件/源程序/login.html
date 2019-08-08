@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录/注册</title>
+	<script type="text/javascript"> 
+		//用户名 密码 
+      function check_data()
+      {
+        if (document.myForm.password.value.length == 0)
+        {
+          alert("“密码”不能为空白");
+          return false;
+        }
+       
+        if (document.myForm.account.value.length == 0)
+        {
+          alert("“账号”不能为空白");
+          return false;
+        } 
+        myForm.submit();					
+      }
+    </script>	
+</head>
+<body bgcolor="lightyellow">
+	<table height="150" >
+		
+	</table>
+	<div align="center">
+	<h1 align="center">图书管理系统</h1>
+	<form  method="post" action="checkpwd.php" name="myForm">
+
+		卡&nbsp;&nbsp;号&nbsp;&nbsp;<input type="text" name="account" ><br><br>
+		密&nbsp;&nbsp;码&nbsp;&nbsp;<input type="password" name="password"><br><br><br>
+		<!--<input type="radio" name="choice">普通用户
+		<input type="radio" name="choice">管理员-->
+		<select name="aselect">
+			<option selected="selected" value="general">普通用户</option>
+			<option value="manager">管理员</option>
+		</select>
+		 <br><br><br>
+
+		<input type="submit" name="" value="登录" onclick="check_data()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="join_user.php"> <input type="button" name="" value="注册"> </a> <br><br>
+		<a href="forgrt_password.html">忘记密码？</a>
+
+
+	</form>	
+	</div>
+	
+	
+
+</body>
+</html>
